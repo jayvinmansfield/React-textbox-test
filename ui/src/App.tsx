@@ -5,11 +5,23 @@ import {
   Switch,
   Redirect
 } from "react-router-dom";
+import Tabs from "./Components/Tabs";
 
 function App() {
   return (
     <div className="App app-wrapper">
-      <>Hello</>
+      <Router>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => {
+              return <Redirect to="/tabs" />;
+            }}
+          />
+          <Route path="/tabs" component={Tabs} />
+        </Switch>
+      </Router>
     </div>
   );
 }
