@@ -1,0 +1,24 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/debounce": "^1.2.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debounce": "^1.2.0",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "http-errors": "~1.6.3",
+    "knex": "^0.17.0",
+    "morgan": "~1.9.1",
+    "pg": "^7.11.0"
+  }
+}
