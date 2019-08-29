@@ -68,7 +68,6 @@ export default function SimpleTabs() {
     "tab-7": {},
     "tab-update": {}
   });
-
   function handleChange(event: any, newValue: any) {
     setValues(newValue);
   }
@@ -99,25 +98,53 @@ export default function SimpleTabs() {
         />
       </TabPanel>
       <TabPanel value={values} index={1}>
-        Item Two
+        <TextFields
+          values={values["tab-2"]}
+          setValues={setValues}
+          tabRef="tab-2"
+        />
       </TabPanel>
       <TabPanel value={values} index={2}>
-        Item Three
+        <TextFields
+          values={values["tab-3"]}
+          setValues={setValues}
+          tabRef="tab-3"
+        />
       </TabPanel>
       <TabPanel value={values} index={3}>
-        Item Four
+        <TextFields
+          values={values["tab-4"]}
+          setValues={setValues}
+          tabRef="tab-4"
+        />
       </TabPanel>
       <TabPanel value={values} index={4}>
-        Item Five
+        <TextFields
+          values={values["tab-5"]}
+          setValues={setValues}
+          tabRef="tab-5"
+        />
       </TabPanel>
       <TabPanel value={values} index={5}>
-        Item Six
+        <TextFields
+          values={values["tab-6"]}
+          setValues={setValues}
+          tabRef="tab-6"
+        />
       </TabPanel>
       <TabPanel value={values} index={6}>
-        Item Seven
+        <TextFields
+          values={values["tab-7"]}
+          setValues={setValues}
+          tabRef="tab-7"
+        />
       </TabPanel>
       <TabPanel value={values} index={7}>
-        Update
+        <TextFields
+          values={values["tab-update"]}
+          setValues={setValues}
+          tabRef="tab-update"
+        />
       </TabPanel>
     </div>
   );
