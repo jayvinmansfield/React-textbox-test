@@ -6,7 +6,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import TextFields from './Textfields'
+import TextFields from "./Textfields";
 
 function TabPanel(props: any) {
   const { children, value, index, ...other } = props;
@@ -46,19 +46,28 @@ const useStyles = makeStyles(theme => ({
 }));
 
 interface FullState {
-  'tab-1': {},
-  'tab-2': {},
-  'tab-3': {},
-  'tab-4': {},
-  'tab-5': {}
-  'tab-6': {}
-  'tab-7': {}
-  'tab-update': {}
+  "tab-1": {};
+  "tab-2": {};
+  "tab-3": {};
+  "tab-4": {};
+  "tab-5": {};
+  "tab-6": {};
+  "tab-7": {};
+  "tab-update": {};
 }
 
 export default function SimpleTabs() {
   const classes = useStyles();
-  const [values, setValues] = React.useState<FullState>()
+  const [values, setValues] = React.useState<FullState>({
+    "tab-1": {},
+    "tab-2": {},
+    "tab-3": {},
+    "tab-4": {},
+    "tab-5": {},
+    "tab-6": {},
+    "tab-7": {},
+    "tab-update": {}
+  });
 
   function handleChange(event: any, newValue: any) {
     setValues(newValue);
@@ -83,7 +92,11 @@ export default function SimpleTabs() {
         </Tabs>
       </AppBar>
       <TabPanel value={values} index={0}>
-        <TextFields values={values['tab-1']} setValues={setValues} tabRef='tab-1' />
+        <TextFields
+          values={values["tab-1"]}
+          setValues={setValues}
+          tabRef="tab-1"
+        />
       </TabPanel>
       <TabPanel value={values} index={1}>
         Item Two
@@ -100,10 +113,10 @@ export default function SimpleTabs() {
       <TabPanel value={values} index={5}>
         Item Six
       </TabPanel>
-      <TabPanel value={values} index={5}>
+      <TabPanel value={values} index={6}>
         Item Seven
       </TabPanel>
-      <TabPanel value={values} index={6}>
+      <TabPanel value={values} index={7}>
         Update
       </TabPanel>
     </div>
